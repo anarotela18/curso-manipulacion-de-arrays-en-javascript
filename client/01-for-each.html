@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto</title>
+</head>
+<body>
+    <!-- <div id="app"></div>
+    <script>
+        const products = [
+            { title: 'Burger', price: 121 },
+            { title: 'Pizza', price: 20 },
+        ];
+
+        const app = document.getElementById('app');
+        products.forEach(product => {
+            app.innerHTML += `<li>${product.title} - ${product.price}</li>`;
+        });
+    </script> -->
+
+    <div id="app"></div>
+    <script>
+        const tasks = [
+            { title: 'Documentation', status: 'done'},
+            { title: 'Debug', status: 'incomplete'}, 
+            { title: 'Programing', status: 'doing'}
+        ];
+
+        const app = document.getElementById('app');
+        tasks.forEach(task => {
+            if(task.status === 'done') {
+                app.innerHTML += `<li><input type="checkbox" checked>${task.title} - ${task.status} </></li>`;
+            }else{
+                app.innerHTML += `<li><input type="checkbox">${task.title} - ${task.status} </></li>`;
+            }
+        });
+    </script>
+</body>
+</html>
