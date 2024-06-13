@@ -39,7 +39,7 @@ const list = [];
 for(let i=0; i<5; i++){
   list.push(Math.floor(Math.random() * 11));
 }
-console.log("Array of numbers:", list);
+// console.log("Array of numbers:", list);
 const respuestaList = list.reduce((obj,value)=>{
   if(value < 6){
     obj["1-5"] = obj["1-5"] + 1;
@@ -56,4 +56,19 @@ const respuestaList = list.reduce((obj,value)=>{
   "6-8": 0,
   "9-10": 0
 });
-console.log("Result: ",respuestaList);
+//console.log("Result: ",respuestaList);
+
+// Practices 2: Sum the total of array elements 
+arrayOfNumbers = [1,1,10];
+const respuestaArray = arrayOfNumbers.reduce((acumulador,item)=>{
+  if(item){
+    acumulador = acumulador + item;
+  }
+  return acumulador;
+},0);
+//console.log(respuestaArray); // Respuesta: 12
+function calcSum(numbers){
+  return numbers.reduce((acumulador,item)=>{ acumulador+= item; return acumulador; }, 0)
+}
+const valor = calcSum(arrayOfNumbers);
+console.log(valor); // Respuesta: 12
